@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 import {
     Home,
@@ -17,6 +17,7 @@ export function App() {
             <div>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Navigate to="/" replace/>} />
                     <Route path="/about" element={<About />}/>
                     <Route path="/events" element={<Events />}/>
                     <Route path="/products" element={<Products />}/>
